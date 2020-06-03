@@ -92,7 +92,7 @@
 
 .message .message-text p span { color: #7b94a5; font-size: 15px; line-height: 40px; }
 
-.message .message-forms { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 580px; height: 298px; }
+.message .message-forms { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 580px; height: 320px; }
 
 .message .message-forms input, .message .message-forms textarea { -webkit-box-sizing: border-box !important; box-sizing: border-box !important; border: none; -webkit-box-shadow: 0 0 10px 0px #0000000e; box-shadow: 0 0 10px 0px #0000000e; }
 

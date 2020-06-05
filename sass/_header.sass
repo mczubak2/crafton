@@ -2,7 +2,9 @@
     display: flex
     background-image: url("../assets/header_bgc.png")
     background-repeat: no-repeat
-    background-size: co
+    // background-size: cover
+    background-position: bottom left
+    background-attachment: fixed
     position: relative
     z-index: 0
     height: 100vh
@@ -20,49 +22,20 @@
     display: flex  
     flex-direction: column
 
-.nav-top
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: start
-    margin-top: 39px
-    width: 100%
-    nav
-        height: 90px
-        line-height: 90px
-        width: 582px
-        ul
-            display: flex
-            flex-direction: row
-            justify-content: space-between
-            list-style: none
-        
-            li
-                // margin-left: 81px
-                // width: 100px
-                a
-                    font-size: 16px
-                    font-family: 'Muli'
-                    font-weight: 500
-                    color: #fff
-                    text-decoration: none
-                
-                    &:hover
-                        cursor: pointer
-.logo
-    img
-        width: 90px
 
 .header-text
-    margin-top: 267px
+    position: absolute
+    bottom: 329px
     h1
         font-size: 40px
         color: #fff
+        font-weight: 200
         span
-            color: #00B6DC
+            color: $light
 
 .header-btns
-    margin-top: 51px
+    position: absolute
+    bottom: 227px
     button
         height: 51px
         margin-right: 19px
@@ -71,7 +44,7 @@
         text-transform: uppercase
         font-family: Muli
         font-size: 14px
-        font-weight: 400
+        font-weight: 300
     button:first-child
         width: 179px
     button:last-child
@@ -81,6 +54,8 @@
         color: #fff
 
 .header-arrows
+    position: absolute
+    bottom: 114px
     display: flex
     margin-top: 91px
     .arrow-left
@@ -105,12 +80,15 @@
         flex-direction: column
         justify-content: space-between
         .circle
+            box-sizing: border-box
             width: 13px
             height: 13px
             background-color: #fff
             border-radius: 30px
+            transition: .3s
             &:hover
                 cursor: pointer
+                transform: scale(1.5)
         .active
             background-color: #FFCD19
 

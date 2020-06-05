@@ -9,25 +9,26 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="blur">
+        <div class="navigation">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="./assets/logo.svg" alt="logo">
+                </div>
+                <nav class="bar">
+                    <ul>
+                        <li><a href="#">I stopnia</a></li>
+                        <li><a href="#">II stopnia</a></li>
+                        <li><a href="#">Podyplomowe</a></li>
+                        <li><a href="#">Szkolenia</a></li>
+                        <li><a href="#">Usługi</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div class="header">
             <div class="shadow"></div>
             <div class="header-content">
-                <div class="nav-top">
-                    <div class="logo">
-                        <img src="./assets/logo.svg" alt="logo">
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">I stopnia</a></li>
-                            <li><a href="#">II stopnia</a></li>
-                            <li><a href="#">Podyplomowe</a></li>
-                            <li><a href="#">Szkolenia</a></li>
-                            <li><a href="#">Usługi</a></li>
-                        </ul>
-                    </nav>
-
-                </div>
                 <div class="slider">
                     <div class="circles">
                         <div class="circle"></div>
@@ -91,7 +92,8 @@
                         </p>
 
                     </div>
-                    <div class="feature-img"><img src="./assets/hand-shake.svg" alt="">
+                    <div class="feature-img">
+                        <!-- <img src="./assets/hand-shake.svg" alt=""> -->
                         <div class="band"><img src="./assets/band.svg" alt="">
                             <p>Nowość</p>
                         </div>
@@ -114,7 +116,15 @@
                         </p>
                     </div>
                     <div class="feature-img">
-                        <div class="shadow"></div>
+                        <div class="shadow">
+                        </div>
+                        <div class="play-circle-shadow">
+                        </div>
+                        <div onclick="toggle()" class="play-circle">
+                            <div class="play">
+                                <img src="./assets/play-button.svg" alt="play-button">
+                            </div>
+                        </div>
                     </div>
                 </article>
             </section>
@@ -123,35 +133,37 @@
             <div class="message-text">
                 <p>Nie znlazłeś odpowiedniego kontaktu? <br> <span>Skorzystaj z formularza.</span></p>
             </div>
-            <label class="message-forms">
-                <div class="fullname">
-                    <input name="name" placeholder="Imię" action="" />
-                    <input name="surname" placeholder="Nazwisko" action="" />
+            <form action="/" method="POST" class="message-form">
+                <div class="message-box">
+                    <div class="fullname">
+                        <input id="mail-name" type="text" name="name" placeholder="Imię" action="" />
+                        <input id="mail-surname" type="text" name="surname" placeholder="Nazwisko" action="" />
+                    </div>
+                    <input id="mail-email" type="text" name="e-mail" placeholder="Adres e-mail" action="" />
+                    <textarea id="mail-message" name="message" placeholder="Treść wiadomości"></textarea>
                 </div>
-                <input name="e-mail" placeholder="Adres e-mail" action="" />
-                <textarea name="text" placeholder="Treść wiadomości" action="" rows="10" cols="70">
-                </textarea>
-            </label>
-            <label class="check">
-                <label class="check-container">
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
+                <label class="check">
+                    <label class="check-container">
+                        <input id="mail-checkbox" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p>Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia
+                        1997
+                        roku o ochronie danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w
+                        celach marketingowych przez Collegium Da Vinci i oświadczam, iż podanie przeze mnie danych
+                        osobowych
+                        jest dobrowolne oraz iż zostałem poinformowany o prawie żądania dostępu do moich danych
+                        osobowych,
+                        ich zmiany oraz usunięcia.</p>
                 </label>
-                <p>Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia
-                    1997
-                    roku o ochronie danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w
-                    celach marketingowych przez Collegium Da Vinci i oświadczam, iż podanie przeze mnie danych
-                    osobowych
-                    jest dobrowolne oraz iż zostałem poinformowany o prawie żądania dostępu do moich danych
-                    osobowych,
-                    ich zmiany oraz usunięcia.</p>
-            </label>
-            <button class="btn-send">
-                Wyślij
-            </button>
+
+                <button id="mail-submit" type="submit" name="submit" class="btn-send">
+                    Wyślij
+                </button>
+            </form>
         </div>
         <div class="footer">
-            <div class="footer content">
+            <div class="footer-content">
                 <div class="footer-address">
                     <div class="footer-address-contact">
                         <p>ul. Głogowska 10 <br>
@@ -159,51 +171,64 @@
                             tel. 61 27 11 000</p>
                     </div>
                     <div class="footer-address-map">
+                        <div id="map"><img src="./assets/localization-point.svg" alt="localizaton"></div>
 
                     </div>
                 </div>
                 <div class="footer-nav">
                     <nav>
                         <ul>
-                            <li><a href="#">O nas</a></li>
+                            <li><a>O nas</a></li>
                             <li><a href="#">Dlaczego CDV</a></li>
                             <li><a href="#">Kadra naukowa</a></li>
                             <li><a href="#">Dla mediów</a></li>
                             <li><a href="#">Kontakt</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Dla kandydata</a></li>
+                            <li><a>Dla kandydata</a></li>
                             <li><a href="#">Poradnik maturzysty</a></li>
                             <li><a href="#">Rekrutacja</a></li>
                             <li><a href="#">Kredyt studencki</a></li>
                             <li><a href="#">Studia dla cudzoziemców</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Dla studenta</a></li>
+                            <li><a>Dla studenta</a></li>
                             <li><a href="#">Wirtualna Uczelnia</a></li>
                             <li><a href="#">Stypendia</a></li>
                             <li><a href="#">Biuro Karier</a></li>
                             <li><a href="#">Studiuj dalej</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Dla biznesu</a></li>
+                            <li><a>Dla biznesu</a></li>
                             <li><a href="#">Współpraca z biznesem</a></li>
                             <li><a href="#">EmotionsLAB</a></li>
                             <li><a href="#">Wynajem sal</a></li>
                             <li><a href="#">Znajdź pracownika</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Na skróty</a></li>
+                            <li><a>Na skróty</a></li>
                             <li><a href="#">Aktualności</a></li>
                             <li><a href="#">Wydarzenia</a></li>
                             <li><a href="#">Konferencje</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
                     </nav>
+                    <div class="footer-nav-footer">
+                        <p>Projekt i realizacja: Crafton</p>
+                    </div>
                 </div>
+
             </div>
         </div>
+        <div id="popup" class="active">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto corrupti neque eligendi sunt aliquid
+            excepturi quasi quos molestias adipisci. Animi laboriosam blanditiis aut, voluptate aliquid incidunt ducimus
+            saepe nam beatae.
+        </div>
     </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd1cQ0FYr6aXc2SI0wavc-JZ-Mu8sRQak&callback=initMap">
+    </script>
     <script src="js/script.js"></script>
 </body>
 

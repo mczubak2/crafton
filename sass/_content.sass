@@ -28,6 +28,7 @@
         line-height: 32px
         h2
             font-size: 36px
+            font-weight: 700
         p
             margin-top: 46px
             font-size: 18px
@@ -46,24 +47,32 @@
 .feature:nth-of-type(2)
     flex-direction: row-reverse
     .feature-img
+        background-image: url("../assets/hand-shake.png")
+        // background-size: 
+        background-position: left 70%
+        box-sizing: border-box
         position: relative
+        min-width: 494px
+        height: 514px
         margin-right: 90px
         margin-left: 0
         .band
             position: absolute
-            top: -32px
-            left: 0px
-            transform: rotate(180deg)
+            top: -26px
+            left: -7px
+            transform: scaleX(-1) rotate(270deg) 
             p
                 position: abosolute
                 font-size: 22px
+                font-weight: 800 !important
                 color: white
-                transform: rotate(135deg) translate(-35px, 25px)
+                transform: rotate(135deg) translate(-85px, 26px) scaleX(-1)
         
 .feature:last-child
     .feature-img
-        background-image: url("../assets/movie-img.svg")
-        background-position: bottom right
+        background-image: url("../assets/movie-img.png")
+        background-size: 1100px
+        background-position: 65% 40%
         box-sizing: border-box
         position: relative
         min-width: 494px
@@ -81,4 +90,34 @@
             background-color: #000000
             opacity: 0.5019607843137255
             box-shadow: 0 0 20px 2px #0000001c
-
+        .play-circle-shadow
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 132px
+            height: 132px
+            background-color: $light
+            opacity: 0.2
+            border-radius: 200px
+            transform: translate(-50%,-50%)
+            z-index: 1
+        .play-circle
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 95px
+            height: 95px
+            background-color: $light
+            opacity: .7
+            border-radius: 200px
+            transform: translate(-50%,-50%)
+            z-index: 2
+            transition: .3s
+            &:hover
+                cursor: pointer
+                opacity: .9
+            .play
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-40%,-50%)

@@ -46,8 +46,6 @@ const navSlide = () => {
 window.addEventListener('scroll', () => {
     let nav = document.querySelector('.navigation');
     nav.classList.toggle('sticky', window.scrollY > 0);
-    // let burger = document.querySelector('.burger');
-    // burger.classList.toggle('on', window.scrollY > 0);
 })
 
 navSlide();

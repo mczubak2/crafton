@@ -13,21 +13,50 @@
         justify-content: space-between
         align-items: center
         width: 1189px
-        .bar
-            width: 582px
-            ul
+        padding: 0 20px
+        nav
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 50px
+            line-height: 50px
+            .nav-links
                 display: flex
-                justify-content: space-between
+                justify-content: space-around
                 list-style: none
+                width: 582px
+                height: 100%
                 li
                     a
+                        display: block
                         color: #fff
                         text-decoration: none
+                        transition: .3s
+                        height: 50px
+                        padding: 0 20px 
+
+                        &:hover
+                            color: $light
+            .burger
+                transition: .3s
+                opacity: 1
+                display: none
+                padding-right: 8px
+                div
+                    width: 30px
+                    height: 2px
+                    background-color: #fff
+                    margin: 7px
+            .burger
+            .on
+                opacity: 1
 
 .navigation
 .sticky
     padding-top: 0
-    background-color: rgba($dark,1)
+    background-color: rgba(#001927,1)
+    &:hover
+        // background-color: rgba(#001927,1)
     .nav-content
         .logo
             img
@@ -39,3 +68,4 @@
     img
         width: 90px
         transition: .4s
+

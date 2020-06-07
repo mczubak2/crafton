@@ -1,12 +1,14 @@
-let circles = document.querySelector('.circles')
-let circle = document.querySelectorAll('.circle');
+// let circles = document.querySelector('.circles')
+// let circle = document.querySelectorAll('.circle');
 
-circle.forEach(element => {
-    element.addEventListener('click', () => {
-        circles.querySelector('.active').classList.remove('active');
-        element.classList.add('active');
-    });
-});
+// circle.forEach(element => {
+//     element.addEventListener('click', () => {
+//         circles.querySelector('.active').classList.remove('active');
+//         element.classList.add('active');
+//     });
+// });
+
+
 
 function initMap() {
     let uluru = {
@@ -27,7 +29,25 @@ function toggle() {
     popup.classList.toggle('active');
 }
 
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+    const navigation = document.querySelector('.navigation')
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        navigation.classList.add('sticky');
+    });
+}
+
+
+
 window.addEventListener('scroll', () => {
     let nav = document.querySelector('.navigation');
     nav.classList.toggle('sticky', window.scrollY > 0);
+    // let burger = document.querySelector('.burger');
+    // burger.classList.toggle('on', window.scrollY > 0);
 })
+
+navSlide();

@@ -1,3 +1,4 @@
+
 #map
     height: 200px
     border-radius: 200px
@@ -7,7 +8,20 @@
         top: 50%
         left: 50%
         transform: translate(-50%,-50%)
-        z-index: 1
+        // z-index: 100
+        animation: point 5s alternate infinite both
+
+@keyframes point
+    20%
+        padding-bottom: 0px
+    25%
+        padding-bottom: 40px
+    30%
+        padding-bottom: 0px
+    35%
+        padding-bottom: 40px
+    40%
+        padding-bottom: 0px
 
 .footer
     display: flex
@@ -35,6 +49,7 @@
                 background-color: white
                 border-radius: 200px
                 position: relative
+                overflow: hidden
         .footer-nav
             flex-basis: 894px
             height: 164px
@@ -46,16 +61,21 @@
                     list-style: none
                     margin-bottom: 15px
                     a
+                        display: block
                         font-size: 15px
                         text-decoration: none
                         color: #fff
+                        padding: 1px 0
+                        &:hover
+                            color: $light
                 li:first-child
                     margin-bottom: 23px
+                    a
+                        &:hover
+                            color: #fff
             .footer-nav-footer
                 padding-top: 104px
                 padding-right: 13px
                 color: #fff
                 text-align: right
-
-
 

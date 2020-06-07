@@ -2,7 +2,7 @@
     display: flex
     background-image: url("../assets/header_bgc.png")
     background-repeat: no-repeat
-    // background-size: cover
+    background-size: cover
     background-position: bottom left
     background-attachment: fixed
     position: relative
@@ -30,6 +30,7 @@
         font-size: 40px
         color: #fff
         font-weight: 200
+        margin-right: 100px
         span
             color: $light
 
@@ -37,21 +38,63 @@
     position: absolute
     bottom: 227px
     button
+        position: relative
+        bottom: 0
         height: 51px
-        margin-right: 19px
         border-radius: 30px
         border: none
         text-transform: uppercase
         font-family: Muli
         font-size: 14px
-        font-weight: 300
+        font-weight: 300 
+        overflow: hidden
+        &:hover
+            cursor: pointer
     button:first-child
         width: 179px
+        border: 3px solid #fff
+        &::before
+            content: "ZOBACZ WIĘCEJ"
+            position: absolute
+            color: #fff
+            line-height: 46px
+            background-color: $light
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            z-index: 0
+            transition: transform .5s
+            transform-origin: 0 0
+            // transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7)
+            transform: translateX(100%)
+        &:hover::before
+            transform: translateX(0%)
+
     button:last-child
+        left: 19px
         width: 218px
-        border: 2px solid #fff
+        border: 3px solid #fff
         background-color: transparent
         color: #fff
+        overflow: hidden
+        &::before
+            content: "UMÓW SIĘ Z ANIOŁEM"
+            position: absolute
+            color: #000
+            line-height: 46px
+            background-color: #fff
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            z-index: 0
+            transition: transform .5s
+            transform-origin: 0 0
+            transform: translateX(-100%)
+        &:hover::before
+            transform: translateX(0%)
+
 
 .header-arrows
     position: absolute
@@ -63,32 +106,34 @@
         transition: .2s
         &:hover
             cursor: pointer
-            transform: scale(1.3) translateX(-2px)
+            transform: translateX(-6px)
     .arrow-right
         transition: .2s
         &:hover
             cursor: pointer
-            transform: scale(1.3) translateX(2px)
+            transform: translateX(6px)
 
-.slider
-    position: absolute
-    top: 360px
-    right: 101px
-    .circles
-        height: 133px
-        display: flex
-        flex-direction: column
-        justify-content: space-between
-        .circle
-            box-sizing: border-box
-            width: 13px
-            height: 13px
-            background-color: #fff
-            border-radius: 30px
-            transition: .3s
-            &:hover
-                cursor: pointer
-                transform: scale(1.5)
-        .active
-            background-color: #FFCD19
+.header
+    .header-content
+        .nav-circles
+            position: absolute
+            top: 360px
+            right: 101px
+            .circles
+                height: 133px
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                .circle
+                    box-sizing: border-box
+                    width: 13px
+                    height: 13px
+                    background-color: #fff
+                    border-radius: 30px
+                    transition: .3s
+                    &:hover
+                        cursor: pointer
+                        transform: scale(1.5)
+                .active
+                    background-color: $yellow
 

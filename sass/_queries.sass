@@ -1,0 +1,223 @@
+@media (max-width: 1225px)
+    .header
+        .header-content
+            padding: 0 50px
+            .nav-circles
+                right: 50px
+    .content
+        .content-section
+            padding: 0 20px
+            .feature
+                padding: 175px 0 0 0
+                .feature-img
+                    margin-left: 25px
+            .feature:nth-of-type(2)
+                .feature-img
+                    margin-left: 0
+                    margin-right: 25px
+            .feature:last-child
+                padding-bottom: 130px
+    .footer
+        .footer-content
+            padding-right: 25px
+            padding-left: 25px
+            .footer-address
+                flex-basis: 230px
+
+@media (max-width: 1000px)
+    .navigation
+        .nav-content
+            .logo
+                padding-left: 10px
+            nav
+                .nav-links
+                    position: absolute
+                    right: 0
+                    top: 80px
+                    height: calc( 100vh - 80px )
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-around
+                    align-items: center
+                    width: 60%
+                    background-color: $dark-nav
+                    transform: translateX(100%)
+                    li
+                        opacity: 1
+                        font-size: 19px
+                        a
+                            display: block
+                            width: 90vw
+                            text-align: center
+                            height: 17vh
+                            line-height: 17vh
+                            
+                .burger
+                    display: block
+                    cursor: pointer
+    .content
+        .content-section
+            .feature
+                padding: 175px 0 0 0
+                flex-direction: column
+                align-items: center
+                // padding: 50px
+                .feature-img
+                    margin: 100px 0px 0px 0px
+            .feature:nth-of-type(2)
+                .feature-img
+                    margin: 100px 0px 0px 0px
+
+
+    .footer
+        display: flex
+        justify-content: center
+        min-height: 50vh
+        background-color: #001927
+        .footer-content
+            display: flex
+            justify-content: space-between
+            width: 1189px
+            padding-top: 50px
+            .footer-address
+                display: flex
+                flex-direction: column
+                height: 50vh
+                flex-basis: 296px
+                padding-right: 20px
+                // padding-top: 20px
+                .footer-address-contact
+                    font-size: 15px
+                    line-height: 26px
+                    color: #fff
+                    padding-bottom: 49px
+                .footer-address-map
+                    width: 199px
+                    height: 199px
+                    background-color: white
+                    border-radius: 200px
+                    position: relative
+                    overflow: hidden
+            .footer-nav
+                flex-basis: 894px
+                height: 70% 
+                padding: 0 50px
+                nav
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    .footer-nav-ul
+                        flex-basis: 35%
+                        padding-bottom: 10px
+                        li
+                            list-style: none
+                            a
+                                font-size: 15px
+                                text-decoration: none
+                                color: #fff
+                        li:first-child
+                            margin-bottom: 23px
+                            color: #000
+                            a
+                                font-weight: 800
+  
+                .footer-nav-footer
+                    padding: 0px 13px 15px
+                    color: #fff
+                    text-align: right
+
+@media (max-width: 650px)
+    .navigation
+        .nav-content
+            nav
+                .nav-links
+                    width: 100%
+    .header
+        .header-content
+            padding: 0 50px
+            .header-text
+                bottom: 300px
+                h1
+                    font-size: 35px
+            .header-btns
+                bottom: 120px
+                button:first-child
+                    display: block
+                    bottom: 20px
+                button:last-child
+                    display: block
+                    left: 0
+                    bottom: 0
+            .nav-circles
+                right: 30px
+            .header-arrows
+                bottom: 50px
+    .content
+        .content-section
+            .feature
+                .feature-text
+                    width: 90vw
+                .feature-img
+                    width: 95vw
+                    min-width: 200px
+                    height: 95vw
+                    .earth
+                        width: 100%
+@media (max-width: 600px)
+    .message
+        .message-form
+            .message-box
+                width: 90vw
+            .check
+                width: 90vw
+
+@media (max-width: 550px)
+    .content
+        .content-section
+            .feature
+                .feature-text
+                    h2
+                        font-size: 30px
+                    p
+                        font-size: 16px
+
+    .footer
+        .footer-content
+            flex-direction: column
+            padding-top: 50px
+            .footer-address
+                flex-direction: row-reverse
+                justify-content: space-around
+                max-height: 50vh
+                flex-basis: 300px
+                padding-right: 50px
+                // padding-top: 20px
+            .footer-nav
+                flex-basis: 500px
+                height: 50% 
+                padding: 0 20px
+                nav
+                    display: flex
+                    justify-content: space-between
+                    padding: 0 30px
+                    flex-wrap: wrap
+
+@media (max-width: 450px)
+
+    .message
+        .message-form
+            .message-box
+                width: 90vw
+            .check
+                width: 90vw
+    .footer
+        .footer-content
+            padding: 50px 10px 0 10px
+            .footer-address
+                padding: 0
+            .footer-nav
+                flex-basis: 500px
+                height: 50%
+                padding: 0 
+                nav
+                    padding: 0 10px

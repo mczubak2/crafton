@@ -1,15 +1,3 @@
-// let circles = document.querySelector('.circles')
-// let circle = document.querySelectorAll('.circle');
-
-// circle.forEach(element => {
-//     element.addEventListener('click', () => {
-//         circles.querySelector('.active').classList.remove('active');
-//         element.classList.add('active');
-//     });
-// });
-
-
-
 function initMap() {
     let uluru = {
         lat: 52.403190,
@@ -40,12 +28,67 @@ const navSlide = () => {
         navigation.classList.add('sticky');
     });
 }
-
-
-
 window.addEventListener('scroll', () => {
     let nav = document.querySelector('.navigation');
     nav.classList.toggle('sticky', window.scrollY > 0);
 })
 
-navSlide();
+const smoothScroll = () => {
+    const circleContent = document.getElementById('content');
+    const circleMessage = document.getElementById('message');
+    const circleFooter = document.getElementById('footer');
+
+    circleContent.addEventListener('click', () => {
+        document.querySelector('.content').scrollIntoView({
+            behavior: "smooth"
+        })
+    })
+    circleMessage.addEventListener('click', () => {
+        document.querySelector('.message').scrollIntoView({
+            behavior: "smooth"
+        })
+    })
+    circleFooter.addEventListener('click', () => {
+        document.querySelector('.footer').scrollIntoView({
+            behavior: "smooth"
+        })
+    })
+}
+
+const sliderHeader = () => {
+    const header = document.querySelector('.header');
+    const arrowLeft = document.querySelector('.arrow-left');
+    const arrowRight = document.querySelector('.arrow-right');
+    let images = [];
+    let time = 2000;
+    let i = 0;
+
+    images[0] = '../assets/header_bgc.png';
+    images[1] = '../assets/header-bgc_2.png';
+    images[2] = '../assets/header-bgc_3.png';
+
+    function changeImg() {
+        header.style.backgroundImage = `url("${images[i]}")`;
+
+        if (i < images.length - 1) {
+            i++;
+        } else {
+            i = 0;
+        }
+
+        setTimeout(changeImg(), time);
+    }
+
+    window.onload = changeImg;
+}
+
+
+const app = () => {
+
+    navSlide();
+    smoothScroll();
+    sliderHeader();
+    initMap();
+}
+
+app();

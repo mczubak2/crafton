@@ -223,18 +223,6 @@ const sendHttpRequest = () => {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', './php/emailform.php');
 }
-const validation = () => {
-    const sendBtn = document.querySelector('.btn-send');
-    sendBtn.addEventListener('click', () => {
-        const inputName = document.getElementById('mail-name');
-        const inputSurname = document.getElementById('mail-surname');
-        const inputMail = document.getElementById('mail-mail');
-        const inputMessage = document.getElementById('mail-message');
-        if (inputName.value == '') {
-            inputName.classList.add
-        }
-    })
-}
 
 const app = () => {
     AOS.init();

@@ -64,6 +64,7 @@
         display: flex
         justify-content: center
         align-items: start
+        cursor: pointer
         .checkbox__input
             display: none
         .checkbox__box
@@ -81,8 +82,13 @@
                 content: '\2714'
                 color: $light
                 font-size: 15px
+                transform: scale(0)
+                transition: .2s ease-in-out
         .checkbox__input:checked + .checkbox__box
-            background-color: #fff
+            color: white
+        .checkbox__input:checked + .checkbox__box::after
+            transform: scale(1)
+
         p
             color: #002841
             font-size: 9px
@@ -118,7 +124,6 @@
             z-index: 0
             transition: transform .3s ease
             transform-origin: 0 0
-            // transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7)
             transform: translateY(100%)
         &:hover::before
             transform: translateY(0)

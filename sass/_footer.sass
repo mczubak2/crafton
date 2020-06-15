@@ -8,7 +8,6 @@
         top: 50%
         left: 50%
         transform: translate(-50%,-50%)
-        // z-index: 100
         animation: point 5s alternate infinite both
 
 @keyframes point
@@ -56,7 +55,6 @@
             nav
                 display: flex
                 justify-content: space-between
-                // flex-wrap: wrap
                 li
                     list-style: none
                     margin-bottom: 15px
@@ -73,12 +71,12 @@
                             position: relative
                             height: 1px
                             width: 0%
-                            bottom: -2px
+                            bottom: -3px
                             left: 0px
                             background-color: $light
                             transition: .3s
                         &:hover::after
-                            width: 100%
+                            width: 20%
                         &:hover
                             color: $light
                         

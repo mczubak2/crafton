@@ -1,17 +1,35 @@
 .header
     display: flex
     position: relative
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: bottom left
-    background-attachment: fixed
-    background-image: url("../assets/header_bgc.png")
     height: 100vh
     width: 100%
     z-index: 0
     justify-content: center
     transition: .3s
-    
+
+.carousel-container
+    width: 500%
+    height: 100vh
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    .carousel-slide
+        display: flex
+        .slide
+            width: 100vw
+            height: 100vh
+            background-attachment: fixed
+            background-position: bottom left
+            background-size: cover
+            background-repeat: no-repeat
+        .slide-one
+            background-image: url('../assets/header_bgc.png')
+        .slide-two
+            background-image: url('../assets/header-bgc_2.jpg')
+        .slide-three
+            background-image: url('../assets/header-bgc_3.jpg')
+
 .shadow
     background-color: #000000
     opacity: 0.5019607843137255
@@ -19,12 +37,12 @@
     z-index: -1
     width: 100%
     height: 100%
+
 .header-content
-    width: 1189px
+    width: 1190px
+    height: 100vh
     display: flex  
     flex-direction: column
-
-
 
 .header-text
     position: absolute
@@ -34,6 +52,7 @@
         color: #fff
         font-weight: 200
         margin-right: 100px
+        animation: header-text-animation 1.3s ease both
         span
             color: $light
 
@@ -112,17 +131,18 @@
     bottom: 114px
     display: flex
     margin-top: 91px
+    animation: arrows-animation .5s 1s ease-in-out both
     .arrow-left
         margin-right: 13px
         transition: .2s
         &:hover
+            animation: arrow-left-hover-animation .5s ease both
             cursor: pointer
-            transform: translateX(-6px)
     .arrow-right
         transition: .2s
         &:hover
+            animation: arrow-right-hover-animation .5s ease both
             cursor: pointer
-            transform: translateX(6px)
 
 .header
     .header-content
@@ -144,10 +164,35 @@
                     transition: .3s
                     &:hover
                         cursor: pointer
-                        transform: scale(1.5)
+                        transform: scale(1.7)
                     a
                         width: 20px
                         height: 100%
                 .active
                     background-color: $yellow
 
+@keyframes header-text-animation
+    0%
+        opacity: 0
+        transform: translateX(-20%)
+@keyframes arrows-animation
+    0%
+        opacity: 0
+        transform: translateY(-20%)
+
+@keyframes arrow-left-hover-animation
+    0%
+        transform: translateX(0px)
+    50%
+        transform: translateX(-8px)
+    100%
+        transform: translateX(0px)
+
+
+@keyframes arrow-right-hover-animation
+    0%
+        transform: translateX(0px)
+    50%
+        transform: translateX(8px)
+    100%
+        transform: translateX(0px)

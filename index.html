@@ -6,42 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>crafton</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container" id="blur">
+    <div class="container">
         <div class="navigation">
             <div class="nav-content">
                 <div class="logo">
-                    <img src="./assets/logo.svg" alt="logo">
+                    <a href="#"><img src="./assets/logo.svg" alt="logo"></a>
                 </div>
                 <nav>
                     <ul class="nav-links">
-                        <li><a href="#">I stopnia</a></li>
-                        <li><a href="#">II stopnia</a></li>
-                        <li><a href="#">Podyplomowe</a></li>
-                        <li><a href="#">Szkolenia</a></li>
-                        <li><a href="#">Usługi</a></li>
+                        <li><a href="#"><span>I stopnia</span><span>I stopnia</span> </a></li>
+                        <li><a href="#"><span>II stopnia</span><span>II stopnia</span></a></li>
+                        <li><a href="#"><span>Podyplomowe</span><span>Podyplomowe</span></a></li>
+                        <li><a href="#"><span>Szkolenia</span><span>Szkolenia</span></a></li>
+                        <li><a href="#"><span>Usługi</span><span>Usługi</span></a></li>
                     </ul>
                     <div class="burger">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </nav>
             </div>
         </div>
         <div class="header">
-            <div class="slider">
-                <div class="slide"></div>
-                <div class="slide"></div>
-                <div class="slide"></div>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <slide class="slide slide-three" id="lastClone"></slide>
+                    <slide class="slide slide-one"></slide>
+                    <slide class="slide slide-two"></slide>
+                    <slide class="slide slide-three"></slide>
+                    <slide class="slide slide-one" id="firstClone"></slide>
+                </div>
             </div>
             <div class="shadow"></div>
             <div class="header-content">
                 <div class="nav-circles">
                     <div class="circles">
-                        <div class="circle active"></div>
+                        <div class="circle active" id="header">
+                            <a href="#header"></a>
+                        </div>
                         <div class="circle" id="content">
                             <a href="#content"></a>
                         </div>
@@ -61,17 +70,17 @@
                     <button>Umów się z Aniołem</button>
                 </div>
                 <div class="header-arrows">
-                    <div class="arrow arrow-left" onclick="slideLeft()"><img src="./assets/arrow-left.png"
-                            alt="arrow-left"></div>
-                    <div class="arrow arrow-right" onclick="slideRight()"><img src="./assets/arrow-right.png"
-                            alt="arrow-right"></div>
+                    <div class="arrow arrow-left"><img src="./assets/arrow-left.png" alt="arrow-left">
+                    </div>
+                    <div class="arrow arrow-right"><img src="./assets/arrow-right.png" alt="arrow-right"></div>
                 </div>
             </div>
         </div>
+
         <div class="content">
             <section class="content-section">
                 <article class="feature">
-                    <div class="feature-text">
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="feature-text">
                         <h2>Dla kogo?</h2>
                         <p>Dedykowane nauczycielom posiadającym przygotowanie pedagogiczne, którzy chcą uzyskać
                             merytoryczne i metodyczne przygotowanie do nauczania kolejnego przedmiotu - Geografii.</p>
@@ -94,10 +103,11 @@
                                 pedagogiczne</span>
                         </p>
                     </div>
-                    <div class="feature-img"><img class="earth" src="./assets/earth.svg" alt=""></div>
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="feature-img"><img
+                            class="earth" src="./assets/earth.svg" alt=""></div>
                 </article>
                 <article class="feature">
-                    <div class="feature-text">
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="feature-text">
                         <h2>Po co?</h2>
                         <p>UW wie co zrobić, by programy proponowanych kierunków studiów były jak najbardziej atrakcyjne
                             z biznesowego punktu widzenia. Do współpracy zapraszamy przedsiębiorców, trenerów,
@@ -110,8 +120,7 @@
                         </p>
 
                     </div>
-                    <div class="feature-img">
-                        <!-- <img src="./assets/hand-shake.svg" alt=""> -->
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="feature-img">
                         <div class="band"><img src="./assets/band.svg" alt="">
                             <p>Nowość</p>
                         </div>
@@ -119,7 +128,7 @@
 
                 </article>
                 <article class="feature">
-                    <div class="feature-text">
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="feature-text">
                         <h2>Z kim?</h2>
                         <p>Ciekawość jest najpotężniejszą cechą ludzką, która popycha ludzi do ciągłego rozwoju. CDV to
                             miejsce, w którym studenci z zainteresowaniem i z przyjemnością zdobywają wiedzę. Zarówno
@@ -133,14 +142,14 @@
 
                         </p>
                     </div>
-                    <div class="feature-img">
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="feature-img">
                         <div class="shadow">
                         </div>
                         <div class="play-circle-shadow">
                         </div>
-                        <div onclick="toggle()" class="play-circle">
+                        <div class="play-circle" onclick="showPopup()">
                             <div class="play">
-                                <img src="./assets/play-button.svg" alt="play-button">
+                                <img src="./assets/play-button.svg" alt="play">
                             </div>
                         </div>
                     </div>
@@ -148,23 +157,25 @@
             </section>
         </div>
         <div class="message">
+            <div class="space"></div>
             <div class="message-text">
                 <p>Nie znlazłeś odpowiedniego kontaktu? <br> <span>Skorzystaj z formularza.</span></p>
             </div>
-            <form action="/" method="POST" class="message-form">
+            <form action="./php/emailform.php" method="POST" class="message-form email-form">
                 <div class="message-box">
                     <div class="fullname">
-                        <input id="mail-name" type="text" name="name" placeholder="Imię" action="" />
-                        <input id="mail-surname" type="text" name="surname" placeholder="Nazwisko" action="" />
+                        <input id="mail-name" class="email-form" type="text" name="name" placeholder="Imię" required />
+                        <input id="mail-surname" class="email-form" type="text" name="surname" placeholder="Nazwisko"
+                            required />
                     </div>
-                    <input id="mail-email" type="text" name="e-mail" placeholder="Adres e-mail" action="" />
-                    <textarea id="mail-message" name="message" placeholder="Treść wiadomości"></textarea>
+                    <input id="mail-email" class="email-form" type="text" name="e-mail" placeholder="Adres e-mail"
+                        required />
+                    <textarea id="mail-message" class="email-form" name="message" placeholder="Treść wiadomości"
+                        required></textarea>
                 </div>
-                <label class="check">
-                    <label class="check-container">
-                        <input id="mail-checkbox" type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
-                    </label>
+                <label class="check" for="mail-checkbox">
+                    <input id="mail-checkbox" class="email-form checkbox__input" type="checkbox">
+                    <div class="checkbox__box"></div>
                     <p>Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia
                         1997
                         roku o ochronie danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w
@@ -175,7 +186,7 @@
                         ich zmiany oraz usunięcia.</p>
                 </label>
 
-                <button id="mail-submit" type="submit" name="submit" class="btn-send">
+                <button id="mail-submit" type="submit" name="submit" class="btn-send email-form">
                     Wyślij
                 </button>
             </form>
@@ -194,41 +205,41 @@
                     </div>
                 </div>
                 <div class="footer-nav">
-                    <nav>
+                    <nav data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                         <ul class="footer-nav-ul">
                             <li><a>O nas</a></li>
-                            <li><a href="#">Dlaczego CDV</a></li>
-                            <li><a href="#">Kadra naukowa</a></li>
-                            <li><a href="#">Dla mediów</a></li>
-                            <li><a href="#">Kontakt</a></li>
+                            <li><a href="#">Dlaczego CDV </a></li>
+                            <li><a href="#">Kadra naukowa </a></li>
+                            <li><a href="#">Dla mediów </a></li>
+                            <li><a href="#">Kontakt </a></li>
                         </ul>
                         <ul class="footer-nav-ul">
                             <li><a>Dla kandydata</a></li>
-                            <li><a href="#">Poradnik maturzysty</a></li>
-                            <li><a href="#">Rekrutacja</a></li>
-                            <li><a href="#">Kredyt studencki</a></li>
-                            <li><a href="#">Studia dla cudzoziemców</a></li>
+                            <li><a href="#">Poradnik maturzysty </a></li>
+                            <li><a href="#">Rekrutacja </a></li>
+                            <li><a href="#">Kredyt studencki </a></li>
+                            <li><a href="#">Studia dla cudzoziemców </a></li>
                         </ul>
                         <ul class="footer-nav-ul">
                             <li><a>Dla studenta</a></li>
-                            <li><a href="#">Wirtualna Uczelnia</a></li>
-                            <li><a href="#">Stypendia</a></li>
-                            <li><a href="#">Biuro Karier</a></li>
-                            <li><a href="#">Studiuj dalej</a></li>
+                            <li><a href="#">Wirtualna Uczelnia </a></li>
+                            <li><a href="#">Stypendia </a></li>
+                            <li><a href="#">Biuro Karier </a></li>
+                            <li><a href="#">Studiuj dalej </a></li>
                         </ul>
                         <ul class="footer-nav-ul">
                             <li><a>Dla biznesu</a></li>
-                            <li><a href="#">Współpraca z biznesem</a></li>
-                            <li><a href="#">EmotionsLAB</a></li>
-                            <li><a href="#">Wynajem sal</a></li>
-                            <li><a href="#">Znajdź pracownika</a></li>
+                            <li><a href="#">Współpraca z biznesem </a></li>
+                            <li><a href="#">EmotionsLAB </a></li>
+                            <li><a href="#">Wynajem sal </a></li>
+                            <li><a href="#">Znajdź pracownika </a></li>
                         </ul>
                         <ul class="footer-nav-ul">
                             <li><a>Na skróty</a></li>
-                            <li><a href="#">Aktualności</a></li>
-                            <li><a href="#">Wydarzenia</a></li>
-                            <li><a href="#">Konferencje</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Aktualności </a></li>
+                            <li><a href="#">Wydarzenia </a></li>
+                            <li><a href="#">Konferencje </a></li>
+                            <li><a href="#">Blog </a></li>
                         </ul>
                     </nav>
                     <div class="footer-nav-footer">
@@ -238,15 +249,18 @@
 
             </div>
         </div>
-        <div id="popup" class="active">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto corrupti neque eligendi sunt aliquid
-            excepturi quasi quos molestias adipisci. Animi laboriosam blanditiis aut, voluptate aliquid incidunt ducimus
-            saepe nam beatae.
-        </div>
+    </div>
+    <div class="popup">
+        <div class="popup-close" onclick="showPopup()"><a>
+                <i class="fas fa-times"></i>
+            </a></div>
+        <iframe src="https://www.youtube.com/embed/qCm1YHgLluU" frameborder="0" allowfullscreen></iframe>
+    </div>
     </div>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd1cQ0FYr6aXc2SI0wavc-JZ-Mu8sRQak&callback=initMap">
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 

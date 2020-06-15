@@ -23,6 +23,9 @@
             padding-left: 25px
             .footer-address
                 flex-basis: 230px
+    .popup
+        width: 70%
+        height: 60%
 
 @media (max-width: 1000px)
     .navigation
@@ -46,11 +49,14 @@
                         opacity: 1
                         font-size: 22px
                         a
+                            padding: 0
                             display: block
                             width: 50vw
                             text-align: center
-                            height: 17vh
-                            line-height: 17vh
+                            height: 15vh
+                            line-height: 15vh
+                            &:hover
+                                transform: translateY(0%)
                             
                 .burger
                     display: block
@@ -107,7 +113,7 @@
                     justify-content: space-between
                     flex-wrap: wrap
                     .footer-nav-ul
-                        flex-basis: 35%
+                        flex-basis: 40%
                         padding-bottom: 10px
                         li
                             list-style: none
@@ -125,6 +131,9 @@
                     padding: 0px 13px 15px
                     color: #fff
                     text-align: right
+    .popup
+        width: 80%
+        height: 60%
 
 @media (max-width: 650px)
     .navigation
@@ -163,6 +172,58 @@
                     height: 95vw
                     .earth
                         width: 100%
+    .footer
+        .footer-content
+            .footer-address
+                display: flex
+                flex-direction: column
+                height: 50vh
+                flex-basis: 296px
+                padding-right: 20px
+                // padding-top: 20px
+                .footer-address-contact
+                    font-size: 15px
+                    line-height: 26px
+                    color: #fff
+                    padding-bottom: 49px
+                .footer-address-map
+                    width: 199px
+                    height: 199px
+                    background-color: white
+                    border-radius: 200px
+                    position: relative
+                    overflow: hidden
+            .footer-nav
+                flex-basis: 894px
+                height: 70% 
+                padding: 0 50px
+                nav
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    .footer-nav-ul
+                        flex-basis: 40%
+                        padding-bottom: 10px
+                        li
+                            list-style: none
+                            a
+                                font-size: 15px
+                                text-decoration: none
+                                color: #fff
+                        li:first-child
+                            margin-bottom: 23px
+                            color: #000
+                            a
+                                font-weight: 800
+  
+                .footer-nav-footer
+                    padding: 0px 13px 15px
+                    color: #fff
+                    text-align: right
+    .popup
+        width: 80%
+        height: 50%
+
 @media (max-width: 600px)
     .message
         .message-form
@@ -170,6 +231,9 @@
                 width: 90vw
             .check
                 width: 90vw
+    .popup
+        width: 85%
+        height: 40%
 
 @media (max-width: 550px)
     .content

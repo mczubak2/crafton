@@ -859,7 +859,8 @@
               left: 0px;
               background-color: #00B6DC;
               -webkit-transition: .3s;
-              transition: .3s; }
+              transition: .3s;
+              border-radius: 20px; }
             .footer .footer-content .footer-nav nav li a:hover::after {
               width: 20%; }
             .footer .footer-content .footer-nav nav li a:hover {
